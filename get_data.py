@@ -11,7 +11,7 @@ for category in df.columns:
     
     for stock in df[category].dropna():       # skip NaN
         
-        data = yf.download(stock, period="5y", interval="1d")
+        data = yf.download(stock, period="10y", interval="1d")
         
         if data.empty:
             continue
